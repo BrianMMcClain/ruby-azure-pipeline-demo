@@ -15,10 +15,10 @@ steps:
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
-  displayName: bundle install
+  displayName: 'bundle install'
 
 - script: bundle exec rspec
-  displayName: RSpec
+  displayName: 'RSpec'
 
 - script: docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'
