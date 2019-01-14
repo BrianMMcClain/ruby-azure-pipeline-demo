@@ -10,7 +10,7 @@ variables:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '>= 2.5.3'
+    versionSpec: '>= 2.5'
 
 - script: bundle install
   displayName: bundle install
