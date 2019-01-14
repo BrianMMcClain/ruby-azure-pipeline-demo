@@ -12,7 +12,9 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-- script: bundle install
+- script: |
+    gem install bundler
+    bundle install --retry=3 --jobs=4
   displayName: bundle install
 
 - script: bundle exec rspec
